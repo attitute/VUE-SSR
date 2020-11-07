@@ -1,14 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
+import createRouter from './router/index.js'
 
 
+
+// 服务端每次执行 都要创建一个全新的实例
 export default ()=>{
+  const router = createRouter()
   const app = new Vue({
-    el: '#app',
+    router,
     render: h => h(App)
   })
 
-  return {app} // 后续会导出 router vuex相关的
+  return {app, router} // 后续会导出 router vuex相关的
 }
 
 

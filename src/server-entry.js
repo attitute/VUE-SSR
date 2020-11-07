@@ -2,11 +2,12 @@ import createApp from './app'
 
 
 
-export default ()=>{
-    const {app} = createApp()
+export default ({url})=>{
+    const {app, router} = createApp()
 
+    console.log(url)
     
-    return app
+    return app // createRenderer().renderToString(vm)
 }
 
 

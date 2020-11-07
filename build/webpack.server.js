@@ -21,6 +21,7 @@ module.exports = merge(base, {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.ssr.html',
+            client: 'client.bundle.js',
             template: resolve('../public/index.ssr.html'),
             minify: false, // 不压缩 不删除注释
             excludeChunks:['server'] // 排除引入文件
